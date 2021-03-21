@@ -1,0 +1,52 @@
+.access {
+  background-color: $cream;
+}
+
+.access-wrap {
+  background-color: $beige;
+  width: 99vw;
+  margin-left: calc(-50vw + 50%); //余白消し
+  display: flex;
+  justify-content: space-between;
+  @include tab {
+    flex-direction: column-reverse;
+    width: 98.5vw;
+  }
+}
+
+
+.access-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
+  margin: auto 0 auto 8.3%;
+  @include tab {
+    margin: 30px auto 60px 20px;
+  }
+  &__title {
+    font-size: 2.4rem;
+    font-family: "Roboto Mono for Powerline";
+    color: #00000038;
+  }
+  &__list {
+    font-size: 1.6rem;
+    color: white;
+    li {
+      margin-top: 1.5em;
+    }
+  }
+}
+
+.access-map {
+  width: 60vw;
+  height: 60vw * 0.51;
+  @include tab {
+    width: 100%;
+    height: 100vw * 0.61;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}

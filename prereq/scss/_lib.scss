@@ -1,0 +1,68 @@
+//////////////////
+//    変数      //
+//////////////////
+$cream: #a193861f;
+$beige: #a1938689;
+$title: #707070;
+
+//////////////////
+//    Mixin     //
+//////////////////
+@mixin pc {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+@mixin tab {
+  @media screen and (max-width: 959px) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+//////////////////
+//    共通      //
+//////////////////
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.inner {
+  width: 100% - 8.3% * 2; //8.3%は両側の余白
+  padding: 260px 0 70px;
+  margin: 0 auto;
+  @include tab {
+  width: 100% - 5.9% * 2; //5.9%は両側の余白
+  padding: 60px 0 76px;
+  }
+}
+
+.title {
+  font-size: 1.8rem;
+  font-family: "Roboto";
+  color: $title;
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+  @include tab {
+    margin-bottom: 50px;
+  }
+  &:after {
+    display: inline-block;
+    content: "";
+    border-top: 1px solid;
+    width: 5em;
+    margin-left: 2.25rem;
+  }
+}

@@ -1,0 +1,578 @@
+@charset "UTF-8";
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+a:visited {
+  color: inherti;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=reset.css.map */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.inner {
+  width: 83.4%;
+  padding: 260px 0 70px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 959px) {
+  .inner {
+    width: 88.2%;
+    padding: 60px 0 76px;
+  }
+}
+
+.title {
+  font-size: 1.8rem;
+  font-family: "Roboto";
+  color: #707070;
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+}
+@media screen and (max-width: 959px) {
+  .title {
+    margin-bottom: 50px;
+  }
+}
+.title:after {
+  display: inline-block;
+  content: "";
+  border-top: 1px solid;
+  width: 5em;
+  margin-left: 2.25rem;
+}
+
+header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  padding: 80px;
+  position: absolute;
+  z-index: 10;
+}
+@media screen and (max-width: 959px) {
+  header {
+    padding: 24px;
+    justify-content: space-between;
+    position: static;
+  }
+}
+
+.header-logo {
+  font-size: 3.8rem;
+  font-family: Roboto Mono for Powerline;
+}
+@media screen and (max-width: 959px) {
+  .header-logo {
+    font-size: 2.2rem;
+  }
+}
+
+nav {
+  width: 40%;
+}
+@media screen and (max-width: 959px) {
+  nav {
+    display: none;
+  }
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  font-size: 1.8rem;
+  color: #707070;
+}
+nav ul li {
+  margin-left: 21px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+nav ul li::after {
+  position: absolute;
+  bottom: -0.5px;
+  left: 0;
+  content: '';
+  width: 82%;
+  height: 1px;
+  background: #000;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+nav ul li:hover {
+  color: #000;
+}
+nav ul li:hover::after {
+  transform: scale(1, 1);
+}
+
+.ham {
+  display: none;
+}
+@media screen and (max-width: 959px) {
+  .ham {
+    width: 16px;
+    height: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .ham span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+  .ham span:last-child {
+    width: 60%;
+  }
+}
+
+.first-v {
+  background: white;
+  height: 100vh;
+}
+.first-v:before {
+  content: "";
+  display: block;
+  background-image: url(../img/Catch.png);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 46%;
+  width: 54%;
+  height: 100%;
+  z-index: 1;
+}
+@media screen and (max-width: 959px) {
+  .first-v:before {
+    position: static;
+    width: 100%;
+    height: 90%;
+  }
+}
+.first-v__wrap {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  height: 214px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: right;
+}
+@media screen and (max-width: 959px) {
+  .first-v__wrap {
+    top: 60%;
+    left: 50%;
+    height: 118px;
+    flex-direction: column-reverse;
+    width: 77%;
+    text-align: center;
+  }
+}
+
+.main-logo {
+  font-size: 3.8rem;
+  font-family: "ヒラギノ明朝 Pro";
+}
+@media screen and (max-width: 959px) {
+  .main-logo {
+    font-size: 2.3rem;
+    color: white;
+    text-shadow: 0px 3px 16px #000000;
+  }
+}
+
+.sub-logo {
+  font-size: 3.8rem;
+  font-family: "Zapfino";
+}
+@media screen and (max-width: 959px) {
+  .sub-logo {
+    font-size: 2.8rem;
+    color: white;
+    text-shadow: 0px 3px 16px #000000;
+  }
+}
+
+.concept {
+  background: linear-gradient(180deg, #a193861f 0%, #a193861f 50%, #a1938689 50%, #a1938689 100%);
+}
+@media screen and (max-width: 959px) {
+  .concept {
+    background: linear-gradient(180deg, #a193861f 0%, #a193861f 25%, #a1938689 25%, #a1938689 100%);
+  }
+}
+.concept-img {
+  display: flex;
+  justify-content: space-between;
+}
+.concept-img__right {
+  width: 62%;
+}
+@media screen and (max-width: 959px) {
+  .concept-img__right {
+    width: 50%;
+  }
+}
+.concept-img__left {
+  width: 37%;
+}
+@media screen and (max-width: 959px) {
+  .concept-img__left {
+    width: 49%;
+  }
+}
+.concept-img__right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+.concept-img__left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.concept-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 72%;
+  margin: 0 auto;
+  padding-bottom: 64px;
+}
+@media screen and (max-width: 959px) {
+  .concept-wrap {
+    flex-direction: column;
+    width: 88%;
+  }
+}
+.concept-logo {
+  width: 48%;
+  color: white;
+  text-align-last: justify;
+}
+@media screen and (max-width: 959px) {
+  .concept-logo {
+    text-shadow: none;
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+  }
+}
+.concept-text {
+  width: 46%;
+  color: white;
+}
+@media screen and (max-width: 959px) {
+  .concept-text {
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 27px;
+  }
+}
+
+.menu-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .menu-wrap {
+    flex-direction: column;
+  }
+}
+
+.menu-item {
+  width: 25%;
+}
+@media screen and (max-width: 959px) {
+  .menu-item {
+    width: 28%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu-item {
+    width: 100%;
+  }
+}
+
+.menu-img img {
+  width: 100%;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 10px 0;
+}
+@media screen and (max-width: 600px) {
+  .menu-content {
+    text-align: left;
+  }
+}
+.menu-content__title {
+  font-family: "Roboto Mono for Powerline";
+  font-size: 3rem;
+  margin-top: 37px;
+  line-height: 1em;
+}
+@media screen and (max-width: 600px) {
+  .menu-content__title {
+    margin-top: 30px;
+  }
+}
+.menu-content__text {
+  margin-top: 34px;
+}
+@media screen and (max-width: 600px) {
+  .menu-content__text {
+    margin-top: 30px;
+  }
+}
+.menu-content__price {
+  margin-top: 34px;
+  text-align: end;
+}
+@media screen and (max-width: 600px) {
+  .menu-content__price {
+    margin: 26px 0 63px;
+  }
+}
+
+.access {
+  background-color: #a193861f;
+}
+
+.access-wrap {
+  background-color: #a1938689;
+  width: 99vw;
+  margin-left: calc(-50vw + 50%);
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 959px) {
+  .access-wrap {
+    flex-direction: column-reverse;
+    width: 98.5vw;
+  }
+}
+
+.access-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
+  margin: auto 0 auto 8.3%;
+}
+@media screen and (max-width: 959px) {
+  .access-content {
+    margin: 30px auto 60px 20px;
+  }
+}
+.access-content__title {
+  font-size: 2.4rem;
+  font-family: "Roboto Mono for Powerline";
+  color: #00000038;
+}
+.access-content__list {
+  font-size: 1.6rem;
+  color: white;
+}
+.access-content__list li {
+  margin-top: 1.5em;
+}
+
+.access-map {
+  width: 60vw;
+  height: 30.6vw;
+}
+@media screen and (max-width: 959px) {
+  .access-map {
+    width: 100%;
+    height: 61vw;
+  }
+}
+.access-map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-wrap {
+  width: 83.4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #70707036;
+  padding-top: 83.5px;
+  margin: 165px auto 62px;
+}
+@media screen and (max-width: 600px) {
+  .footer-wrap {
+    flex-direction: column-reverse;
+    padding-top: 80.5px;
+    margin: 60px auto 19px;
+  }
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .footer-content {
+    width: 100%;
+    padding-top: 62px;
+  }
+}
+.footer-content p {
+  color: #7070704D;
+  font-size: 3.2rem;
+  margin-right: 26px;
+}
+@media screen and (max-width: 600px) {
+  .footer-content p {
+    font-size: 1.8rem;
+  }
+}
+.footer-content i {
+  color: black;
+  font-size: 1.9rem;
+}
+
+.twitter-icon {
+  margin-right: 9px;
+}
+
+.footer-button {
+  background-color: white;
+  line-height: 37px;
+  box-shadow: none;
+  width: 184px;
+  border: 1px solid #707070;
+}
+.footer-button p {
+  font-size: 1.8rem;
+  color: #707070;
+}
+
+/*# sourceMappingURL=main.css.map */

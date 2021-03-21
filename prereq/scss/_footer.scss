@@ -1,0 +1,53 @@
+.footer {
+  &-wrap {
+    width: 100% - 8.3% * 2; //8.3%は両側の余白
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #70707036;
+    padding-top: 83.5px;
+    margin: 165px auto 62px;
+    @include sp {
+      flex-direction: column-reverse;
+      padding-top: 80.5px;
+      margin: 60px auto 19px;
+    }
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+      width: 100%;
+      padding-top: 62px;
+    }
+    p {
+      color: #7070704D;
+      font-size: 3.2rem;
+      margin-right: 26px;
+      @include sp {
+        font-size: 1.8rem;
+      }
+    }
+    i {
+      color: black;
+      font-size: 1.9rem;
+    }
+  }
+}
+
+
+.twitter-icon {
+  margin-right: 9px;
+}
+
+.footer-button {
+  background-color: white;
+  line-height: 37px;
+  box-shadow: none;
+  width: 184px;
+  border: 1px solid $title;
+  p {
+    font-size: 1.8rem;
+    color: $title;
+  }
+}

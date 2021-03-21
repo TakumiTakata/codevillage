@@ -1,0 +1,82 @@
+header {
+  display: flex;
+  justify-content: left;
+  align-items: center; 
+  width: 100%;
+  padding: 80px;
+  position: absolute;
+  z-index: 10;
+  @include tab {
+    padding: 24px;
+    justify-content: space-between;
+    position: static;
+  }
+}
+
+.header-logo {
+  font-size: 3.8rem;
+  font-family: Roboto Mono for Powerline;
+  @include tab {
+    font-size: 2.2rem;
+  }
+}
+
+
+nav {
+  @include tab {
+    display: none;
+  }
+  width: 40%;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 1.8rem;
+    color: #707070;
+    li {
+      margin-left: 21px;
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      &::after {
+        position: absolute;
+        bottom: -0.5px;
+        left: 0;
+        content: '';
+        width: 82%;
+        height: 1px;
+        background: #000;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform .3s;
+      }
+      &:hover{
+        color: #000;
+      }
+      &:hover::after {
+        transform: scale(1, 1);
+      }
+    }
+  }
+}
+
+  .ham {
+    display: none;
+    @include tab {
+      width: 16px;
+      height: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      span {
+        display: inline-block;
+        width: 100%;
+        height: 2px;
+        background-color: black
+      }
+      span:last-child {
+        width: 60%;
+      }
+    }
+  }
